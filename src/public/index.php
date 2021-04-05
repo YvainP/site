@@ -4,9 +4,7 @@ require_once('../../vendor/autoload.php');
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-
-
-
+use website\controller\Controller;
 
 
 $settings = require_once "../configuration/settings.php";
@@ -19,14 +17,11 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 $app = new \Slim\App($container);
-
 $app->get('/', function (Request $request, Response $response){
 	    return $this->view->render($response, 'accueil.html.twig');
 })->setName('home');
 
-$app->get('/login', function (Request $request, Response $response){
-	    return $this->view->render($response, 'login.html.twig');
-})->setName('login');
+$app->get('/login', Controller::class.':test')->setName('login');
 
 $app->run();
 

@@ -135,7 +135,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.20.20",
+            "version": "v6.20.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -179,7 +179,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.20.20",
+            "version": "v6.20.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -223,16 +223,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v6.20.20",
+            "version": "v6.20.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "07c17d1fc4ff5420fd5dbd91480c7ab9167f95fb"
+                "reference": "df0f50a4e53b9db3b2f134766302a220acadc93b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/07c17d1fc4ff5420fd5dbd91480c7ab9167f95fb",
-                "reference": "07c17d1fc4ff5420fd5dbd91480c7ab9167f95fb",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/df0f50a4e53b9db3b2f134766302a220acadc93b",
+                "reference": "df0f50a4e53b9db3b2f134766302a220acadc93b",
                 "shasum": ""
             },
             "require": {
@@ -280,11 +280,11 @@
                 "orm",
                 "sql"
             ],
-            "time": "2021-03-19T14:00:44+00:00"
+            "time": "2021-03-26T15:54:12+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v6.20.20",
+            "version": "v6.20.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -1041,16 +1041,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v5.2.5",
+            "version": "v5.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "0947ab1e3aabd22a6bef393874b2555d2bb976da"
+                "reference": "2cc7f45d96db9adfcf89adf4401d9dfed509f4e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/0947ab1e3aabd22a6bef393874b2555d2bb976da",
-                "reference": "0947ab1e3aabd22a6bef393874b2555d2bb976da",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/2cc7f45d96db9adfcf89adf4401d9dfed509f4e1",
+                "reference": "2cc7f45d96db9adfcf89adf4401d9dfed509f4e1",
                 "shasum": ""
             },
             "require": {
@@ -1127,7 +1127,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-06T07:59:01+00:00"
+            "time": "2021-03-23T19:33:48+00:00"
         },
         {
             "name": "symfony/translation-contracts",
