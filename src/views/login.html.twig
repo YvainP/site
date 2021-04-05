@@ -1,3 +1,7 @@
-{% if test is not null %}
-    {{test}}
-{% endif %}
+{% extends "base.html.twig" %}
+{% block content %}
+    {% if test is not null %}
+        {{test}}
+    {% endif %}
+<a href="{{ path_for('register')}}">register</a>
+{% endblock %}

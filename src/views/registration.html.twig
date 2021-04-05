@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <form method="POST" action="{{path_for('checkRegister')}}">
+        <div class="formular">
+            <h2>Changer de mot de passe</h2>
+            <div>
+                <label for="pseudo">Pseudo</label>
+                <input name="pseudo" required>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input name="email" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input name="password" type='password' placeholder="*******" required>
+            </div>
+            <div>
+                <input class="btn" type="submit" value="Valider">
+            </div>
+        </div>
+    </form>
+    {% if pseudo is not null %}
+        {{pseudo}}
+    {% endif %}
+{% endblock %}

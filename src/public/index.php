@@ -4,7 +4,7 @@ require_once('../../vendor/autoload.php');
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-use website\controller\Controller;
+use website\controller\ControllerUser;
 
 
 $settings = require_once "../configuration/settings.php";
@@ -21,7 +21,11 @@ $app->get('/', function (Request $request, Response $response){
 	    return $this->view->render($response, 'accueil.html.twig');
 })->setName('home');
 
-$app->get('/login', Controller::class.':test')->setName('login');
+$app->get('/login', ControllerUser::class.':login')->setName('login');
+
+$app->get('/registration', ControllerUser::class.':register')->setName('register');
+
+$app->post('/registration', ControllerUser::class.':checkRegister')->setName('checkRegister');
 
 $app->run();
 
