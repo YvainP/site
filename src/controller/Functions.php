@@ -20,4 +20,11 @@ class Functions {
         }
         return $fields;
     }
+
+    //redirige l'utilisateur
+    public static function redirect(ResponseInterface $response, $route, $args = [])
+    {
+        global $app;
+        return $response->withRedirect($app->getContainer()->get('router')->pathFor($route, $args));
+    }
 }

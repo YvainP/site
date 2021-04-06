@@ -1,7 +1,21 @@
 {% extends "base.html.twig" %}
 {% block content %}
-    {% if test is not null %}
-        {{test}}
-    {% endif %}
-<a href="{{ path_for('register')}}">register</a>
+    <form method="POST" action="{{path_for('login')}}">
+        <div class="formular">
+            <h2>Login</h2>
+            <div>
+                <label for="pseudo">Pseudo</label>
+                <input name="pseudo" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input name="password" type='password' placeholder="*******" required>
+            </div>
+            <div>
+                <input class="btn" type="submit" value="Valider">
+            </div>
+        </div>
+    </form>
+<br>No account?  
+<a href="{{ path_for('pageRegister')}}">register</a>
 {% endblock %}
