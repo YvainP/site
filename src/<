@@ -1,0 +1,14 @@
+<nav>
+{% block content %}
+    {{app.request.uri}}
+{{ app.request.pathinfo }}
+    {% if isConnected() %}
+        {% if app.request.get('_route') != 'profile' %}
+            <a href="{{path_for('profile')}}">Profile</a>
+        {% endif %}
+        <a href="">Logout</a>
+    {% else %}
+        <a href="{{path_for('login')}}"> Login </a>
+    {% endif %}
+{% endblock %}
+</nav>

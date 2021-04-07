@@ -17,17 +17,23 @@ $capsule->setAsGlobal('session', $_SESSION);
 $capsule->bootEloquent();
 
 $app = new \Slim\App($container);
-$app->get('/', function (Request $request, Response $response){
-	    return $this->view->render($response, 'accueil.html.twig');
-})->setName('home');
 
+//// Routes ////
+
+//Accueil
+$app->get('/', ControllerUser::class.':home')->setName('home');
+
+//Gestion utilisateur
 $app->get('/login', ControllerUser::class.':pageLogin')->setName('pageLogin');
-
 $app->post('/login', ControllerUser::class.':login')->setName('login');
 
 $app->get('/registration', ControllerUser::class.':pageRegister')->setName('pageRegister');
-
 $app->post('/registration', ControllerUser::class.':register')->setName('register');
+
+$app->get('/profile', ControllerUser::class.':pageProfile')->setName('profile');
+
+$app->get('/logout', ControllerUser::class.':logOut')->setName('logout');
+
 
 $app->run();
 

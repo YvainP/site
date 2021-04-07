@@ -3,7 +3,7 @@
 namespace website\controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Slim\Http\UploadedFile;
+use Illuminate\Support\Facades\Route;
 
 class Functions {
 
@@ -26,5 +26,10 @@ class Functions {
     {
         global $app;
         return $response->withRedirect($app->getContainer()->get('router')->pathFor($route, $args));
+    }
+
+    //récupère le nom de la route actuelle
+    public static function currentRoute(){
+        return substr($_SERVER['REQUEST_URI'], 1);
     }
 }

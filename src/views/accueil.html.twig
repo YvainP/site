@@ -1,7 +1,0 @@
-{% extends "base.html.twig" %}
-
-{% block content %}
-    Hello, {{ session.userID }}
-    {{ app.session.get('userID') }}
-    <a href="{{path_for('login')}}"> Connexion </a>  
-{% endblock %}
