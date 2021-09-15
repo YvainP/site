@@ -27,11 +27,10 @@ class ControllerUser extends Controller{
         $potentialUser = User::where('pseudo', '=', $pseudo)->first();
         echo 2;
         if(count($potentialUser)) {
-            echo 2;
             if(fctAuth::checkPassword($pseudo, $pwdTyped)){
                 $_SESSION['user']['id'] = $potentialUser->id;
                 echo 1;
-                //return Functions::redirect($response, 'home');
+                return Functions::redirect($response, 'home');
             } 
         }
         
@@ -74,6 +73,7 @@ class ControllerUser extends Controller{
     public function logOut(Request $request, Response $response,$args){
         fctAuth::logout(); 
         return Functions::redirect($response, 'home');
+
     }
 
 }
