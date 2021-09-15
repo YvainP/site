@@ -1,15 +1,18 @@
-<nav>
-{% block content %}
-    <a href="{{path_for('home')}}">Home</a>
-    {% if isConnected() %}
-        {% if currentRoute() != 'profile' %}
-            <a href="{{path_for('profile')}}">Profile</a>
-        {% endif %}
-        <a href="{{path_for('logout')}}">Logout</a>
-    {% else %}
-        {% if currentRoute() != 'login' %}
-            <a href="{{path_for('login')}}"> Login </a>
-        {% endif %}
-    {% endif %}
-{% endblock %}
+<nav class="navbar navbar-dark bg-dark" style="text-decoration: none;">
+    <div class="row w-100 font-weight-bold text-center">
+        {% block content %}
+                    <a class="nav-link col-md-3" href="{{path_for('home')}}">Home</a>
+            {% if isConnected() %}
+                {% if currentRoute() != 'profile' %}
+                    <a class="nav-link col-md-3" lass="nav-link active" href="{{path_for('profile')}}">Profile</a>
+             {% endif %}
+                    <a class="nav-link active" href="{{path_for('logout')}}">Logout</a>
+            {% else %}
+                {% if currentRoute() != 'login' %}
+                    <a class="nav-link col-md-3 active" href="{{path_for('login')}}"> Login </i>
+                {% endif %}
+            {% endif %}
+        {% endblock %}
+    </div>
 </nav>
+
